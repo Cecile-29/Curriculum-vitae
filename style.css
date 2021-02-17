@@ -16,7 +16,7 @@ idee de base avoir la photo/img à droite */
 {
   .conteneur {
     display:flex;
-    flex-flow:row;
+    flex-flow:row wrap;
   }
   img {order:-1;}
 }
@@ -29,24 +29,30 @@ Sources web plus précises pour ces recherches :
 https://flexbox.ninja/demos/website-header/
 https://www.booglit.com/flexbox-media-queries/
 https://www.alsacreations.com/article/lire/930-css3-media-queries.html
+https://forum.alsacreations.com/topic-4-81336-1-Modifier-lordre-des-elements-en-responsive.html
 
 ci-dessous comment faire du responsive design ? VIDEO SUPER
-https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s */
+https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s
+
+*/
 @media screen and (max-width: 768px)
 {
   .conteneur {
-    display:flex;
-    flex-flow:column;
+    display: inline-flex;
+    flex-direction: column-reverse;
   }
+  nav{align-self: flex-end;}
+  img {
+    order:-1;
+    } /* Sur mobile menu hamburger en haut à doite */
 }
 .conteneur{
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: nowrap;
 }
 .titre {
-  justify-content: center;
   font-size: 5vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
   background-color: pink;
   min-height: 100%;
@@ -54,18 +60,16 @@ https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s */
   width: 30%;
 }
 .photo {
-  align-self: flex-start;
   background-color: red;
   min-height: 100%;
   height: 500px;
-  width: 30%;  
+  width: 30%;
 }
 .menu {
-  align-items: flex-end;
   background-color: green;
   height: 20px;
-  width: auto;
+  width: 10%;
 }
-li{
-  list-style: none;
+ol, li{
+    list-style: none;
 }
