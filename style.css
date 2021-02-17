@@ -1,10 +1,17 @@
 body, h1{
+  /* Valeurs pour effet plein écran sur les éléments :
+    0 ; pour marges et padding,
+    100 %; hauteur et largeur */
   height: 100%;
   width: 100%;
   background-color: #FFF4D6;
   margin: 0;
   padding: 0;
 }
+/* si la taille d’écran minimale est supérieure à 768px le @media screen (media query)
+changera l’ordre d’affichage des éléments avec la propriété flexbox "order"
+(ici appliquee à img (coder l’élément et non la classe) valeur : -1 ; ne pas oublier le and avant la taille min ou max)
+idee de base avoir la photo/img à droite */
 @media screen and (min-width: 768px)
 {
   .conteneur {
@@ -13,12 +20,23 @@ body, h1{
   }
   img {order:-1;}
 }
+/* Pour l’affichage mobile, plus logique que h1 s’affiche en premier,
+si la taille d’écran est inférieure à 768px le @media screen (media query)
+laisse l’ordre des éléments par défaut d’affichage, le display en colonnes.
+
+Sources web plus précises pour ces recherches :
+
+https://flexbox.ninja/demos/website-header/
+https://www.booglit.com/flexbox-media-queries/
+https://www.alsacreations.com/article/lire/930-css3-media-queries.html
+
+ci-dessous comment faire du responsive design ? VIDEO SUPER
+https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s */
 @media screen and (max-width: 768px)
 {
   .conteneur {
     display:flex;
     flex-flow:column;
-
   }
 }
 .conteneur{
@@ -29,7 +47,7 @@ body, h1{
 }
 .titre {
   justify-content: center;
-  font-size: 5vw;
+  font-size: 5vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
   background-color: pink;
   min-height: 100%;
   height: 100px;
@@ -40,7 +58,7 @@ body, h1{
   background-color: red;
   min-height: 100%;
   height: 500px;
-  width: 30%;   /pour idee de responsive
+  width: 30%;  
 }
 .menu {
   align-items: flex-end;
