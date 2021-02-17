@@ -1,1 +1,21 @@
-
+body {
+  background-color: #FFF4D6;
+}
+.accueil{
+  display: flex;
+  justify-content: space-between;
+}
+.element_1{
+  display: flex;
+  justify-content: flex-start;
+  background-color: red;
+  height: 100px;
+  width: 30%;   /pour idee de responsive
+}
+.element_2{
+  display: flex;
+  justify-content: flex-end;
+  background-color: green;
+  height: 20px;
+  width: 5%;
+}
