@@ -9,7 +9,8 @@ body {
   display: flex;
   justify-content: flex-start;
   background-color: red;
-  height: 100px;
+  min-height: 100%;
+  height: 800px;
   width: 30%;   /pour idee de responsive
 }
 .element_2{
