@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "space";
+  src: url(/home/belazar/Bureau/CV/Curriculum-vitae/typos/space.woff) format("woff");
+}
 body, h1{
   /* Valeurs pour effet plein écran sur les éléments :
     0 ; pour marges et padding,
@@ -53,6 +57,7 @@ https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s
   flex-wrap: nowrap;
 }
 .titre {
+  font-family: space;
   font-size: 5vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
   background-color: pink;
   min-height: 100%;
@@ -65,11 +70,11 @@ https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s
   height: 500px;
   width: 30%;
 }
-.menu {
-  background-color: green;
-  height: 20px;
+.fa-bars {
+  color: red;
   width: 10%;
 }
-ol, li{
-    list-style: none;
+.contenus{
+  font-family: space;
+  color: green;
 }
