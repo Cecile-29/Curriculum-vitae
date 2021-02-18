@@ -67,7 +67,7 @@ https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s
 .conteneur{
   display: flex;
 }
-.titre, .menu_general{
+.titre{
   display: flex;
   flex-direction: column;
   flex: 3;
@@ -75,7 +75,6 @@ https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s
   font-size: 3vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
   background-color: pink;
   height: 100vh;
-
 }
 /* utilisation de vh pour adapter element la vue totale ecran
 peut s'appliquer a bcp de propriétés css
@@ -88,25 +87,36 @@ https://www.alsacreations.com/astuce/lire/51-hauteur-100-element.html*/
 }
 .titre:nth-child(2){
   justify-content: center;
-  font-family: Rounded_Elegance;
+  font-family: space;
   font-size: 3vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
 }
 .photo {
   background-color: #FF9015;
   height: 100vh;
 }
-.fa-bars {
+.fa-bars{
   align-self: flex-end;
-  color: red;
+  font-size: 2vw;
+  padding: 1vw;
+}
+.fa-window-close{
+  align-self: flex-end;
   font-size: 2vw;
   padding: 1vw;
 }
 .div{
   display: flex;
 }
-.contenus, .menu_general, li{
+.li{
+  align-items: center;
   font-family: space;
-  font-size: 2vw;
+  font-size: 4vw;
   color: #8863A3;
   list-style: none;
+
+  margin: 10vw, 10vw, 10vw, 10vw;
+  padding: 10vw, 10vw, 10vw, 10vw;
+}
+.a{
+  text-decoration: none;
 }
