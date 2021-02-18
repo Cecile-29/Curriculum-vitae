@@ -6,13 +6,20 @@
   font-family: "Rounded_Elegance";
   src: url(typos/Rounded_Elegance.ttf);
 }
-body, h1, h2{
+body {
   /* Valeurs pour effet plein écran sur les éléments :
     0 ; pour marges et padding,
     100 %; hauteur et largeur */
   height: 100%;
   width: 100%;
-  background-color: #FFF4D6;
+  background-color: #FCB422;
+  margin: 0;
+  padding: 0;
+}
+h1, h2{
+  color: #8863A3;
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -52,18 +59,6 @@ https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s
     flex-direction: column;
   }
   div {order: -1;}
-  /* https://developer.mozilla.org/fr/docs/Web/CSS/:nth-child
-   .conteneur:nth-child(3n){
-    order: -1;
-  }
- .fa-bars{
-    display: flex;
-    order: -1;
-  }
-  .menu{
-    display: flex;
-    order: -1;
-  }*/
 }/* Sur mobile menu hamburger en haut à doite */
   body {
     /* margin: 2vh; */
@@ -72,13 +67,15 @@ https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s
 .conteneur{
   display: flex;
 }
-.titre{
+.titre, .menu_general{
   display: flex;
   flex-direction: column;
   flex: 3;
-  font-size: 2vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
+  max-font-size: 30px;
+  font-size: 3vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
   background-color: pink;
   height: 100vh;
+
 }
 /* utilisation de vh pour adapter element la vue totale ecran
 peut s'appliquer a bcp de propriétés css
@@ -107,7 +104,9 @@ https://www.alsacreations.com/astuce/lire/51-hauteur-100-element.html*/
 .div{
   display: flex;
 }
-.contenus{
-  font-family: Rounded_Elegance;
-  color: #6310CA;
+.contenus, .menu_general, li{
+  font-family: space;
+  font-size: 2vw;
+  color: #8863A3;
+  list-style: none;
 }
