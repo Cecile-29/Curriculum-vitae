@@ -6,7 +6,7 @@
   font-family: "Rounded_Elegance";
   src: url(typos/Rounded_Elegance.ttf);
 }
-body, h1{
+body, h1, h2{
   /* Valeurs pour effet plein écran sur les éléments :
     0 ; pour marges et padding,
     100 %; hauteur et largeur */
@@ -20,7 +20,7 @@ body, h1{
 changera l’ordre d’affichage des éléments avec la propriété flexbox "order"
 (ici appliquee à img (coder l’élément et non la classe) valeur : -1 ; ne pas oublier le and avant la taille min ou max)
 idee de base avoir la photo/img à droite */
-@media screen and (min-width: 768px)
+@media screen and (min-width: 800px)
 {
   .conteneur {
     display: flex;
@@ -45,7 +45,7 @@ ci-dessous comment faire du responsive design ? VIDEO SUPER
 https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s
 
 */
-@media screen and (max-width: 765px)
+@media screen and (max-width: 799px)
 {
   .conteneur{
     display: flex;
@@ -71,13 +71,12 @@ https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s
 }
 .conteneur{
   display: flex;
-  flex-wrap: wrap;
 }
-.titre {
+.titre{
   display: flex;
+  flex-direction: column;
   flex: 3;
-  font-family: space;
-  font-size: 5vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
+  font-size: 2vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
   background-color: pink;
   height: 100vh;
 }
@@ -87,22 +86,26 @@ peut s'appliquer a bcp de propriétés css
 https://www.alsacreations.com/astuce/lire/51-hauteur-100-element.html*/
 .titre:nth-child(1){
   justify-content: center;
-  align-self: center;
-  padding: 5vw, 5vw, 5vw, 5vw;
+  font-family: space;
+  font-size: 4vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
+}
+.titre:nth-child(2){
+  justify-content: center;
+  font-family: Rounded_Elegance;
+  font-size: 3vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
 }
 .photo {
-  flex: 2;
   background-color: #FF9015;
   height: 100vh;
 }
 .fa-bars {
+  align-self: flex-end;
   color: red;
   font-size: 2vw;
   padding: 1vw;
 }
 .div{
   display: flex;
-  justify-content: flex-end;
 }
 .contenus{
   font-family: Rounded_Elegance;
