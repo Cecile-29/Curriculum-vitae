@@ -2,6 +2,10 @@
   font-family: "space";
   src: url(/home/belazar/Bureau/CV/Curriculum-vitae/typos/space.woff) format("woff");
 }
+@font-face {
+  font-family: "Rounded_Elegance";
+  src: url(typos/Rounded_Elegance.ttf);
+}
 body, h1{
   /* Valeurs pour effet plein écran sur les éléments :
     0 ; pour marges et padding,
@@ -19,10 +23,12 @@ idee de base avoir la photo/img à droite */
 @media screen and (min-width: 768px)
 {
   .conteneur {
-    display:flex;
-    flex-flow:row wrap;
+    display: flex;
+    flex-direction: row;
   }
-  img {order:-1;}
+  img {
+    order:-1;
+  }
 }
 /* Pour l’affichage mobile, plus logique que h1 s’affiche en premier,
 si la taille d’écran est inférieure à 768px le @media screen (media query)
@@ -39,42 +45,66 @@ ci-dessous comment faire du responsive design ? VIDEO SUPER
 https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s
 
 */
-@media screen and (max-width: 768px)
+@media screen and (max-width: 765px)
 {
-  .conteneur {
-    display: inline-flex;
-    flex-direction: column-reverse;
+  .conteneur{
+    display: flex;
+    flex-direction: column;
   }
-  nav{align-self: flex-end;}
-  img {
-    order:-1;
-    } /* Sur mobile menu hamburger en haut à doite */
+  div {order: -1;}
+  /* https://developer.mozilla.org/fr/docs/Web/CSS/:nth-child
+   .conteneur:nth-child(3n){
+    order: -1;
+  }
+ .fa-bars{
+    display: flex;
+    order: -1;
+  }
+  .menu{
+    display: flex;
+    order: -1;
+  }*/
+}/* Sur mobile menu hamburger en haut à doite */
+  body {
+    /* margin: 2vh; */
+  }
 }
 .conteneur{
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 .titre {
+  display: flex;
+  flex: 3;
   font-family: space;
   font-size: 5vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
   background-color: pink;
-  min-height: 100%;
-  height: 100px;
-  width: 30%;
+  height: 100vh;
+}
+/* utilisation de vh pour adapter element la vue totale ecran
+peut s'appliquer a bcp de propriétés css
+
+https://www.alsacreations.com/astuce/lire/51-hauteur-100-element.html*/
+.titre:nth-child(1){
+  justify-content: center;
+  align-self: center;
+  padding: 5vw, 5vw, 5vw, 5vw;
 }
 .photo {
-  background-color: red;
-  min-height: 100%;
-  height: 500px;
-  width: 30%;
+  flex: 2;
+  background-color: #FF9015;
+  height: 100vh;
 }
 .fa-bars {
   color: red;
-  width: 10%;
+  font-size: 2vw;
+  padding: 1vw;
+}
+.div{
+  display: flex;
+  justify-content: flex-end;
 }
 .contenus{
-  font-family: space;
-  color: green;
+  font-family: Rounded_Elegance;
+  color: #6310CA;
 }
