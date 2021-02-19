@@ -69,7 +69,8 @@ https://www.youtube.com/watch?v=mjRHg-rs1Ps&t=215s
   flex: 3;
   max-font-size: 30px;
   font-size: 3vw; /* vw : viewport width taille typo s'adapte la taille d’écran*/
-  background-color: pink;
+  color : #8863A3;
+  background-color: #FCB422;
   height: 100vh;
 }
 /* utilisation de vh pour adapter element la vue totale ecran
@@ -107,7 +108,6 @@ li{
   align-items: center;
   font-family: space;
   font-size: 4vw;
-  color: #8863A3;
   list-style: none;
   margin: 10vw, 10vw, 10vw, 10vw;
   padding: 10vw, 10vw, 10vw, 10vw;
