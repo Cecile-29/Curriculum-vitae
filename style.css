@@ -2,10 +2,6 @@
   font-family: "space";
   src: url(/home/belazar/Bureau/CV/Curriculum-vitae/typos/space.woff) format("woff");
 }
-@font-face {
-  font-family: "Rounded_Elegance";
-  src: url(typos/Rounded_Elegance.ttf);
-}
 body {
   /* Valeurs pour effet plein écran sur les éléments :
     0 ; pour marges et padding,
@@ -107,16 +103,16 @@ https://www.alsacreations.com/astuce/lire/51-hauteur-100-element.html*/
 .div{
   display: flex;
 }
-.li{
+li{
   align-items: center;
   font-family: space;
   font-size: 4vw;
   color: #8863A3;
   list-style: none;
-
   margin: 10vw, 10vw, 10vw, 10vw;
   padding: 10vw, 10vw, 10vw, 10vw;
 }
-.a{
+a{
   text-decoration: none;
+  color: #8863A3;
 }
